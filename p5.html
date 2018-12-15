@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+   <!-- master css -->
+   <link rel="stylesheet" href="assets/css/master.css">
+   <!-- Scripts -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <link href="assets/css/prism.css" rel="stylesheet" />
+    <title>Perfect Squares</title>
+
+</head>
+<body>
+   <div class="container-fluid main-header">
+        <h1><a href="index.html">Cracking The Code Interview - Problems ll</a></h1>
+   </div>
+
+   <div class="container-fluid content-container">
+        <div class="row">
+            <div class="col-12 main-content">
+                <h3>Perfect Squares</h3>
+                    <p>
+                            Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, ...) which sum to n.                    </p>
+                <div class="row">
+                    <div class="col-6">
+                        <h5>Code</h5>
+                        <pre>
+                            <code class="language-python">
+                                class Solution(object):
+                                    def numberOfArithmeticSlices(self, A):
+                                        print("No code :(")
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="col-6">
+                        <h5>IDEAL</h5>
+                        <p>
+                            This problem gives you an integer then get how many numbers need to get a sum. 
+                        </p>
+
+                        <p>
+                            The dynamic solution would to check a case were <i>n</i> is a perfect square, then only add the results and would by 2 as an answer. However if not a formula can be simple as <i>n</i> get to the closes square number then get the difference and check if the result can also be reduced with a perfect square.
+                        </p>
+
+                        <p>
+                                Recursive definition could be set as: <b>dp(n) = dp(n-n[i])+n</b> 
+                        </p>
+
+                        <p>
+                            Personal note, I am not very sure about my recursive definition, since I do not know how to get the closes number of the perfect squares then substract by n
+                        </p>
+
+                    </div> 
+                </div>
+            </div>
+        </div>
+   </div>
+
+   <script src="assets/js/prism.js"></script>
+
+</body>
+</html>

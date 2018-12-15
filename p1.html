@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+   <!-- master css -->
+   <link rel="stylesheet" href="assets/css/master.css">
+   <!-- Scripts -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <link href="assets/css/prism.css" rel="stylesheet" />
+    <title>Minimum Falling Path Sum</title>
+
+</head>
+<body>
+   <div class="container-fluid main-header">
+        <h1><a href="index.html">Cracking The Code Interview - Problems ll</a></h1>
+   </div>
+
+   <div class="container-fluid content-container">
+        <div class="row">
+            <div class="col-12 main-content">
+                <h3>Minimum Falling Path Sum</h3>
+                    <p>
+                        Given a square array of integers A, we want the minimum sum of a falling path through A.
+                    </p>
+                         A falling path starts at any element in the first row, and chooses one element from each row.  The next row's choice must be in a column that is different from the previous row's column by at most one.
+                    <p>
+
+                    </p>
+                <div class="row">
+                    <div class="col-6">
+                        <h5>Code</h5>
+                        <pre>
+                            <code class="language-python">
+                                    class Solution(object):
+                                    def minFallingPathSum(self, A):
+                                        while len(A) >= 2:
+                                            row = A.pop()            
+                                            for i in xrange(len(row)):
+                                                A[-1][i] += min(row[max(0,i-1): min(len(row), i+2)])
+                                        return min(A[0])
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="col-6">
+                        <h5>IDEAL</h5>
+                        <p>
+                            The idea in this problem can be solved using dynamic program since from a small portion of the problem everyelse can be solved in a large scale. Each of the paths contain some amount of numbers that in a sum have to be the minimum path.
+                        </p>
+                        <p>TThe approach to take while using dynamic program is basically getting each element of an array then comparing it with other elements in the subarray, and added to another array (final path). Then do on to the next one get the minimum value then added again to the minimum array, until it reaches the end of the array parent and no more subarrays. Then sum all the values in the array and finally get the sum which will result in the minimum. </p>
+
+                        <p>
+                            Recursive definition could be set as: <b>dp(r, c)</b> which is  <b>A[r][c] + min(dp(r+1, c-1), dp(r+1, c), dp(r+1, c+1))</b>
+                        </p>
+
+                        <p>
+                                <b>NOTE:</b> Code from Leetcode. This probably has a different solution
+                            </p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+   </div>
+
+   <script src="assets/js/prism.js"></script>
+
+</body>
+</html>

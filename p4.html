@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+   <!-- master css -->
+   <link rel="stylesheet" href="assets/css/master.css">
+   <!-- Scripts -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <link href="assets/css/prism.css" rel="stylesheet" />
+    <title>  Minimum ASCII Delete Sum for Two Strings</title>
+
+</head>
+<body>
+   <div class="container-fluid main-header">
+        <h1><a href="index.html">Cracking The Code Interview - Problems ll</a></h1>
+   </div>
+
+   <div class="container-fluid content-container">
+        <div class="row">
+            <div class="col-12 main-content">
+                <h3>  Minimum ASCII Delete Sum for Two Strings</h3>
+                    <p>
+                            Given two strings s1, s2, find the lowest ASCII sum of deleted characters to make two strings equal.
+                    </p>
+
+                <div class="row">
+                    <div class="col-6">
+                        <h5>Code</h5>
+                        <pre>
+                            <code class="language-python">
+                                class Solution(object):
+                                    def numberOfArithmeticSlices(self, A):
+                                        print("No code :(")
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="col-6">
+                        <h5>IDEAL</h5>
+                        <p>
+                            The problem present two strings that need to represent the same word by removing characters, but checking the size by their ASCII representation.
+                        </p>
+                        <p>
+                            The main idea here is to recursively get the size of each word using their ASCII code and fill and array. After compare the string <i>S1</i> and <i>S2</i> to check which of them is shorter. Let state <i>S1</i> is the shortest, then compare which words have in common with <i>S2</i>. Then check the size of both words in common from <i>S2</i> and <i>S1</i> then remove them from the word. Save them into an array and finally calculate their weight. Also checking if the words with characters are already removed are the same.
+                        </p>
+
+                        <p>
+                                Recursive definition could be set as: Short word (get min)<b> dp(S) = dp[i] < dp[i+1] </b> get sum <b>dp(s) = dp+s</b>, check values are same, <b>dp(s,sp)= dp[i]==dp[sp]</b>, 
+                        </p>
+
+                        <p>In conclusion we use a small solution to apply to a big problem so it can be reused as many times as possible</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+   </div>
+
+   <script src="assets/js/prism.js"></script>
+
+</body>
+</html>

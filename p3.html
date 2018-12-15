@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+   <!-- master css -->
+   <link rel="stylesheet" href="assets/css/master.css">
+   <!-- Scripts -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <link href="assets/css/prism.css" rel="stylesheet" />
+    <title> Arithmetic Slices</title>
+
+</head>
+<body>
+   <div class="container-fluid main-header">
+        <h1><a href="index.html">Cracking The Code Interview - Problems ll</a></h1>
+   </div>
+
+   <div class="container-fluid content-container">
+        <div class="row">
+            <div class="col-12 main-content">
+                <h3> Arithmetic Slices</h3>
+                    <p>
+                            A sequence of number is called arithmetic if it consists of at least three elements and if the difference between any two consecutive elements is the same.
+                     </p>
+                    <p>
+                        The substrings with different start indexes or end indexes are counted as different substrings even they consist of same characters. 
+                    </p>
+                <div class="row">
+                    <div class="col-6">
+                        <h5>Code</h5>
+                        <pre>
+                            <code class="language-python">
+                                class Solution(object):
+                                    def numberOfArithmeticSlices(self, A):
+                                        print("No code :(")
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="col-6">
+                        <h5>IDEAL</h5>
+                        <p>
+                            This problem gives you an array that contains only numbers and the method should detect if the numbers in the array follow a sequence. This means that from left to right check if they have a similarity by being different because of a math operation. For example... 2, 4, 6 This is a sequence, since 2+2 =4 and 4+2 =6 and so on. The idea of this problem is from the array get how many sequences are in the array and count them.
+                        </p>
+                        <p>
+                            Again, the idea here is use dynamic programing. How is this posible? Dynamic programing basically solves a small problem for large scale problems too. Here, it can be used by extracting part of the array. Let say <i>A</i> is the array/list then we can get the size, with the size we can break it into parts. For example <i>len(A) = 9</i> we have 3 parts. Then iterate each part until reach the number of the portion. Then apply the same method to the rest of the array then if results into a boolean value of True it counts torward a counter which will be the final return statement (int) for the main method.
+                        </p>
+
+                        
+                        <p>
+                                Recursive definition could be as: <b>S = n^1/2</b> (Getting part of the array ,square root, if possible). <b>dp[i] = dp[i+1]-dp[i+2], </b>
+                        </p>
+
+                        <p>In conclusion we use a small solution to apply to a big problem so it can be reused as many times as possible</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+   </div>
+
+   <script src="assets/js/prism.js"></script>
+
+</body>
+</html>

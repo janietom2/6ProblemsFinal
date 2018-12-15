@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+   <!-- master css -->
+   <link rel="stylesheet" href="assets/css/master.css">
+   <!-- Scripts -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <link href="assets/css/prism.css" rel="stylesheet" />
+    <title>Partition to K Equal Sum Subsets</title>
+
+</head>
+<body>
+   <div class="container-fluid main-header">
+        <h1><a href="index.html">Cracking The Code Interview - Problems ll</a></h1>
+   </div>
+
+   <div class="container-fluid content-container">
+        <div class="row">
+            <div class="col-12 main-content">
+                <h3>Partition to K Equal Sum Subsets</h3>
+                    <p>
+                        Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.</p>
+                    <p>
+                        A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
+                    </p>
+                <div class="row">
+                    <div class="col-6">
+                        <h5>Code</h5>
+                        <pre>
+                            <code class="language-python">
+                                class Solution(object):
+                                    def numberOfArithmeticSlices(self, A):
+                                        print("No code :(")              
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="col-6">
+                        <h5>IDEAL</h5>
+                        <p>This is a basic problem that has an array and a given key, and it should break appart the problem into subsets that contain the same value as each other, by doing a sum</p>
+                        
+                        <p>The dynamic approach is basically getting another array of used and unused values then try to select the target to avoid any crossing or getting a higher. After using an element then do the sum of remaning elements until while checking it satisfies the target</p>
+
+                        <p>Recursive approach: <b>target = sum(nums)/key</b>, sum or remaning elements <b>n = n+n[i]</b></p>
+
+                    </div> 
+                </div>
+            </div>
+        </div>
+   </div>
+
+   <script src="assets/js/prism.js"></script>
+
+</body>
+</html>
